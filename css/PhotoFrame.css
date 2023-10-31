@@ -1,4 +1,47 @@
-#container {
+#photo-container {
   width: 640px;
   height: 640px;
+}
+
+#photo-input{
+	display: none;
+}
+
+#frame-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#frame-selector{
+	padding: 10px;
+	font-size: 16px;
+}
+
+#photo-container {
+    position: relative;
+    width: 640px;
+    height: 640px;
+}
+
+#photo-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#photo-container #frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#tempp{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
