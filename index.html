@@ -5,16 +5,18 @@
     <link rel="stylesheet" type="text/css" href="css/PhotoFrame.css">
 </head>
 <body>
+	<div id="titlediv">
     <h1 id="title">Photo Frame Editor</h1>
+	</div>
     <div id="container">
         <div id="photo-container">
             <img src="" id="photo">
 			<img src="" id="frame">
         </div>
-		<div>
+		<div id="butt">
         <button id="download">Download</button>
-        <input type="file" id="photo-input">
-        <select id="frame-selector">
+        <input type="file" id="photo-input" style="padding: 10px 20px; font-size: 18px;">
+        <select id="frame-selector" style="padding: 10px 20px; font-size: 18px;">
             <option value="">Select Frame</option>
             <option value="frame1.png">Frame 1</option>
 			<option value="frame2.png">Frame 2</option>
