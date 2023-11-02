@@ -1,3 +1,7 @@
+body {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 #container {
 	max-width: 100%;
 	margin: 0 auto;
@@ -33,6 +37,7 @@ button {
 #title{
 	color:white;
 	text-align: center;
+	text-size: 10rem;
 }
 
 #photo-input{
@@ -41,8 +46,9 @@ button {
 }
 
 #titlediv{
-	background-color: rgba(54,11,181,1);
+	background-color: rgba(36,15,101);
 	padding:30px;
+	width: 100%;
 }
 
 #butt{
@@ -87,3 +93,4 @@ button {
 	  	padding: 35px;
 	  }
     }
+	
