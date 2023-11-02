@@ -1,7 +1,7 @@
 #container {
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 10px;
 	text-align: center;
 }
 #photo-container, #frame-container {
@@ -20,10 +20,6 @@
 	cursor: pointer;
 }
 
-#title{
-	text-align: center;
-	color: white;
-}
 #frame-selector {
     padding: 10px 20px; /* 调整按钮的内边距以增加按钮的大小 */
     font-size: 50px; /* 调整按钮的字体大小 */
@@ -34,20 +30,37 @@ button {
     font-size: 50px; /* 调整按钮的字体大小 */
 }
 
+#title{
+	color:white;
+	text-align: center;
+}
+
 #photo-input{
-	padding: 25px 30px; /* 调整按钮的内边距以增加按钮的大小 */
+	padding: 10px 20px; /* 调整按钮的内边距以增加按钮的大小 */
 	font-size: 50px; /* 调整按钮的字体大小 */
 }
 
 #titlediv{
 	background-color: rgba(54,11,181,1);
-	padding:10px;
+	padding:30px;
 }
 
 #butt{
-	background-color: greenyellow;
 	padding: 20px;
 }
+
+#int{
+	margin:20px;
+}
+
+#sel{
+	margin: 20px;
+}
+
+#dow{
+	margin: 20px;
+}
+
 
     @media (max-width: 768px) {
       #photo {

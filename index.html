@@ -6,19 +6,23 @@
 </head>
 <body>
 	<div id="titlediv">
-    <h1 id="title">DSOBA AD102 - Let’s Dance<p></p>
+    <h1 id="title">Photo Frame Editor</h1>
+	</div>
+	<h2>DSOBA AD102 - Let’s Dance<p></p>
 	<br>Add small into before the image:
 	Select or take a photo to add photo frames on it, and share in your social media!!
-	<p></p><br>Let’s start the groove~</h1>
-	</div>
+	<p></p><br>Let’s start the groove~</h2>
     <div id="container">
         <div id="photo-container">
             <img src="" id="photo">
 			<img src="" id="frame">
         </div>
+	</div>
 		<div id="butt">
-        <button id="download">Download</button>
+		<div id="int">
         <input type="file" id="photo-input">
+		</div>
+		<div id="sel">
         <select id="frame-selector">
             <option value="">Select Frame</option>
             <option value="frame1.png">Frame 1</option>
@@ -28,7 +32,11 @@
 			<option value="frame5.png">Frame 5</option>
         </select>
 		</div>
-    </div>
+		<div id="dow">
+		<button id="download">Download</button>
+		</div>
+	</div>
+    
 		<script src="js/PhotoFrame.js"></script>
 	</body>
 	</html>
