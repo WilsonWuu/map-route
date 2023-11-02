@@ -1,5 +1,5 @@
 #container {
-	max-width: 800px;
+	max-width: 100%;
 	margin: 0 auto;
 	padding: 20px;
 	text-align: center;
@@ -22,19 +22,25 @@
 
 #title{
 	text-align: center;
+	color: white;
 }
-#frame-section {
-    margin: 0px;
-    padding: 10px;
+#frame-selector {
+    padding: 10px 20px; /* 调整按钮的内边距以增加按钮的大小 */
+    font-size: 50px; /* 调整按钮的字体大小 */
 }
 
 button {
     padding: 10px 20px; /* 调整按钮的内边距以增加按钮的大小 */
-    font-size: 18px; /* 调整按钮的字体大小 */
+    font-size: 50px; /* 调整按钮的字体大小 */
+}
+
+#photo-input{
+	padding: 25px 30px; /* 调整按钮的内边距以增加按钮的大小 */
+	font-size: 50px; /* 调整按钮的字体大小 */
 }
 
 #titlediv{
-	background-color: yellow;
+	background-color: rgba(54,11,181,1);
 	padding:10px;
 }
 
@@ -52,4 +58,19 @@ button {
         max-width: 100%;
         height: auto;
       }
+	  
+	  #photo-input{
+	  	padding: 20px 30px; /* 调整按钮的内边距以增加按钮的大小 */
+	  	font-size: 25px; /* 调整按钮的字体大小 */
+	  }
+	  
+	  #titlediv{
+	  	background-color: yellow;
+	  	padding:10px;
+	  }
+	  
+	  #butt{
+	  	background-color: greenyellow;
+	  	padding: 35px;
+	  }
     }
