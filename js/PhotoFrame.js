@@ -76,29 +76,35 @@
 		  };
 		});
 		
+		// 应用相框的函数
 		function applyFrame() {
-		  // 创建一个canvas元素
-		  const canvas = document.createElement('canvas');
-		  // 设置canvas的大小与照片的大小相同
-		  canvas.width = photo.width;
-		  canvas.height = photo.height;
-		  // 获取canvas的2D上下文对象
-		  const context = canvas.getContext('2d');
-		  // 清空画布
-		  context.clearRect(0, 0, canvas.width, canvas.height);
-		  // 在canvas上绘制照片和相框
-		  context.drawImage(photo, 0, 0, canvas.width, canvas.height);
-		  // 隐藏原始相框图像
-		  frame.style.display = 'none';
-		  // 设置相框的透明度
-		  const frameOpacity = 1; // 透明度值,可以根据需要进行调整
-		  // 绘制带有透明度的相框
-		  context.globalAlpha = frameOpacity;
-		  context.drawImage(frame, 0, 0, canvas.width, canvas.height);
-		  // 将canvas转换为DataURL格式的图片数据
-		  const url = canvas.toDataURL();
-		  // 将照片的src属性设置为DataURL格式的图片数据
-		  photo.src = url;
+		    // 创建一个canvas元素
+		    const canvas = document.createElement('canvas');
+		    // 设置canvas的大小与照片的大小相同
+		    canvas.width = 640;
+		    canvas.height = 640;
+		    // 获取canvas的2D上下文对象
+		    const context = canvas.getContext('2d');
+		    // 清空画布
+		    context.clearRect(0, 0, canvas.width, canvas.height);
+		    // 在canvas上绘制照片和相框
+		    const scale = Math.min(640 / photo.width, 640 / photo.height); // 计算缩放比例
+		    const scaledWidth = photo.width * scale;
+		    const scaledHeight = photo.height * scale;
+		    const offsetX = (640 - scaledWidth) / 2;
+		    const offsetY = (640 - scaledHeight) / 2;
+		    context.drawImage(photo, offsetX, offsetY, scaledWidth, scaledHeight);
+		    // 隐藏原始相框图像
+		    frame.style.display = 'none';
+		    // 设置相框的透明度
+		    const frameOpacity = 1; // 透明度值，可以根据需要进行调整
+		    // 绘制带有透明度的相框
+		    context.globalAlpha = frameOpacity;
+		    context.drawImage(frame, 0, 0, canvas.width, canvas.height);
+		    // 将canvas转换为DataURL格式的图片数据
+		    const url = canvas.toDataURL();
+		    // 将照片的src属性设置为DataURL格式的图片数据
+		    photo.src = url;
 		}
 
 		downloadButton.addEventListener('click',function(event){
