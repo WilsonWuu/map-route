@@ -42,8 +42,8 @@
 		// 应用相框的函数
 		function applyFrame() {
 			const canvas = document.createElement('canvas');
-			canvas.width = 640;
-			canvas.height = 640;
+			canvas.width = 512;
+			canvas.height = 512;
 			const context = canvas.getContext('2d');
 			context.clearRect(0, 0, canvas.width, canvas.height);
 		  
