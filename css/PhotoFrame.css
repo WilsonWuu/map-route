@@ -69,7 +69,7 @@ button {
 }
 
 
-    @media (max-width: 768px) {
+/*    @media (max-width: 768px) {
       #photo {
         max-width: 100%;
         height: auto;
@@ -80,10 +80,9 @@ button {
       }
 	  
 	  #photo-input{
-	  	padding: 20px 30px; /* 调整按钮的内边距以增加按钮的大小 */
-	  	font-size: 25px; /* 调整按钮的字体大小 */
-	  }
-	  
+	  	padding: 20px 30px;  调整按钮的内边距以增加按钮的大小 
+	  	font-size: 25px;   调整按钮的字体大小 
+	  } 	  
 	  #titlediv{
 	  	background-color: #12202b;
 	  	padding:10px;
@@ -93,5 +92,5 @@ button {
 	  	background-color: #070302;
 	  	padding: 35px;
 	  }
-    }
+    } */
 	
