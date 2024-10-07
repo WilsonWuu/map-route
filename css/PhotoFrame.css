@@ -18,7 +18,7 @@ body {
 	margin-top: 20px;
 	padding: 10px 20px;
 	font-size: 20px;
-	background-color: #007bff;
+	background-color: #12202b; /*#007bff*/
 	color: #fff;
 	border: none;
 	border-radius: 5px;
@@ -85,12 +85,12 @@ button {
 	  }
 	  
 	  #titlediv{
-	  	background-color: yellow;
+	  	background-color: #12202b;
 	  	padding:10px;
 	  }
 	  
 	  #butt{
-	  	background-color: greenyellow;
+	  	background-color: #070302;
 	  	padding: 35px;
 	  }
     }
