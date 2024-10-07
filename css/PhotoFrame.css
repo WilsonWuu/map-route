@@ -33,7 +33,7 @@ body {
 #title {
     color: white;
     text-align: center;
-    font-size: 10rem; /* 修正为 font-size */
+    font-size: 5rem; /* 修正为 font-size */
 }
 
 #titlediv {

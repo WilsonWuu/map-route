@@ -43,8 +43,8 @@
 		function applyFrame() {
 			const canvas = document.createElement('canvas');
 			// 这里可以根据需要动态设置画布的大小
-			canvas.width = 512;
-			canvas.height = 512;
+			canvas.width = 1024;
+			canvas.height = 1024;
 			const context = canvas.getContext('2d');
 			context.clearRect(0, 0, canvas.width, canvas.height);
 		
