@@ -42,22 +42,44 @@
 		// 应用相框的函数
 		function applyFrame() {
 			const canvas = document.createElement('canvas');
+			// 这里可以根据需要动态设置画布的大小
 			canvas.width = 512;
 			canvas.height = 512;
 			const context = canvas.getContext('2d');
 			context.clearRect(0, 0, canvas.width, canvas.height);
-		  
-			// 在这里不要对图片进行缩放,而是直接绘制到画布上
-			context.drawImage(photo, 0, 0, photo.width, photo.height);
-		  
+		
+			const imgAspectRatio = photo.width / photo.height;
+			const canvasAspectRatio = canvas.width / canvas.height;
+		
+			let drawWidth, drawHeight;
+		
+			// 根据宽高比调整绘制的图像大小
+			if (imgAspectRatio > canvasAspectRatio) {
+				// 图片更宽，调整宽度
+				drawWidth = canvas.width;
+				drawHeight = drawWidth / imgAspectRatio;
+			} else {
+				// 图片更高或相等，调整高度
+				drawHeight = canvas.height;
+				drawWidth = drawHeight * imgAspectRatio;
+			}
+		
+			// 计算绘制位置，使图像居中
+			const drawX = (canvas.width - drawWidth) / 2;
+			const drawY = (canvas.height - drawHeight) / 2;
+		
+			// 绘制原始图像
+			context.drawImage(photo, drawX, drawY, drawWidth, drawHeight);
+		
 			// 绘制相框图像
 			context.drawImage(frame, 0, 0, canvas.width, canvas.height);
-		  
+		
 			frame.style.display = 'none';
+		
 			// 将 canvas 转换为 DataURL 格式的图片数据
 			const url = canvas.toDataURL();
 			photo.src = url;
-		  }
+		}
 
 		downloadButton.addEventListener('click',function(event){
 			    // 创建一个虚拟的链接元素
