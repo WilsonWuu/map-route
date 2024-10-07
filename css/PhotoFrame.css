@@ -47,7 +47,7 @@ button {
 }
 
 #titlediv{
-	background-color: rgba(36,15,101);
+	background-color: #12202b; /*rgba(36,15,101);*/
 	padding:30px;
 	width: 100%;
 }
