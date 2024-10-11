@@ -81,11 +81,23 @@
 			photo.src = url;
 		}
 
-		downloadButton.addEventListener('click',function(event){
-			    // 创建一个虚拟的链接元素
-			    const downloadLink = document.createElement('a');
-			    downloadLink.href = photo.src;
-			    downloadLink.download = 'framed_photo.png';
-			    // 模拟点击下载链接
-			    downloadLink.click();
-		})
+		downloadButton.addEventListener('click', function(event) {
+			const link = document.createElement('a');
+		
+			// 使用 Blob 下载
+			fetch(photo.src)
+				.then(res => {
+					if (!res.ok) throw new Error('网络响应不正常');
+					return res.blob();
+				})
+				.then(blob => {
+					const url = window.URL.createObjectURL(blob);
+					link.href = url;
+					link.download = 'framed_photo.png'; // 设置文件名
+					document.body.appendChild(link); // 将链接添加到文档
+					link.click(); // 模拟点击
+					document.body.removeChild(link); // 移除链接
+					window.URL.revokeObjectURL(url); // 释放内存
+				})
+				.catch(err => console.error('下载失败', err));
+		});
