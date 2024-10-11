@@ -42,42 +42,36 @@
 		// 应用相框的函数
 		function applyFrame() {
 			const canvas = document.createElement('canvas');
-			// 这里可以根据需要动态设置画布的大小
-			canvas.width = 640;
-			canvas.height = 640;
+			
+			// 使用上传图像的宽高设置画布
+			canvas.width = photo.naturalWidth;
+			canvas.height = photo.naturalHeight;
+		
 			const context = canvas.getContext('2d');
 			context.clearRect(0, 0, canvas.width, canvas.height);
 		
-			const imgAspectRatio = photo.width / photo.height;
+			// 计算绘制的图像大小和位置
+			const imgAspectRatio = photo.naturalWidth / photo.naturalHeight;
 			const canvasAspectRatio = canvas.width / canvas.height;
 		
 			let drawWidth, drawHeight;
 		
-			// 根据宽高比调整绘制的图像大小
 			if (imgAspectRatio > canvasAspectRatio) {
-				// 图片更宽，调整宽度
 				drawWidth = canvas.width;
 				drawHeight = drawWidth / imgAspectRatio;
 			} else {
-				// 图片更高或相等，调整高度
 				drawHeight = canvas.height;
 				drawWidth = drawHeight * imgAspectRatio;
 			}
 		
-			// 计算绘制位置，使图像居中
 			const drawX = (canvas.width - drawWidth) / 2;
 			const drawY = (canvas.height - drawHeight) / 2;
 		
-			// 绘制原始图像
 			context.drawImage(photo, drawX, drawY, drawWidth, drawHeight);
-		
-			// 绘制相框图像
 			context.drawImage(frame, 0, 0, canvas.width, canvas.height);
 		
-			frame.style.display = 'none';
-		
 			// 将 canvas 转换为 DataURL 格式的图片数据
-			const url = canvas.toDataURL();
+			const url = canvas.toDataURL('image/png', 1.0); // 最高质量
 			photo.src = url;
 		}
 
