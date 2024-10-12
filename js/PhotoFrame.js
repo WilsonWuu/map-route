@@ -43,8 +43,8 @@
 		function applyFrame() {
 			const canvas = document.createElement('canvas');
 			// 这里可以根据需要动态设置画布的大小
-			canvas.width = 1024;
-			canvas.height = 1024;
+			canvas.width = 512;
+			canvas.height = 512;
 			const context = canvas.getContext('2d');
 			context.clearRect(0, 0, canvas.width, canvas.height);
 		
@@ -82,10 +82,10 @@
 		}
 
 		downloadButton.addEventListener('click',function(event){
-			// 创建一个虚拟的链接元素
-			const downloadLink = document.createElement('a');
-			downloadLink.href = photo.src;
-			downloadLink.download = 'framed_photo.png';
-			// 模拟点击下载链接
-			downloadLink.click();
-	})
+			    // 创建一个虚拟的链接元素
+			    const downloadLink = document.createElement('a');
+			    downloadLink.href = photo.src;
+			    downloadLink.download = 'framed_photo.png';
+			    // 模拟点击下载链接
+			    downloadLink.click();
+		})
