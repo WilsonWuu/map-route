@@ -78,12 +78,3 @@ body {
         padding: 20px; /* 调整按钮的内边距以适应手机 */
     }
 }
-
-@media (max-width: 375px) { /* 针对 iPhone 的宽度 */
-    #container {
-        padding: 5px; /* 减少内边距 */
-    }
-    #photo-input, #frame-selector, button {
-        font-size: 20px; /* 按钮字体大小调整 */
-    }
-}
